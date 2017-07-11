@@ -1,0 +1,52 @@
+The FOIL dataset annotation follows MS-COCO Image Caption Annotation Format : http://mscoco.org/dataset/#download 
+
+{
+"info" : info,
+"images" : [image],
+"licenses" : [license],
+"annotations" : [annotation],
+
+}
+
+
+info {
+"year" : int,
+"version" : str,
+"description" : str,
+"contributor" : str,
+"url" : str,
+"date_created" : datetime,
+"contact" : str
+}
+
+
+image{
+"id" : int,
+"width" : int,
+"height" : int,
+"file_name" : str,
+"license" : int,
+"flickr_url" : str,
+"coco_url" : str,
+"date_captured" : datetime,
+}
+
+
+license{
+"id" : int,
+"name" : str,
+"url" : str,
+}
+
+
+
+annotation{
+"id" : int,
+"foil_id" : int,
+"image_id" : int,
+"caption" : str,
+"target_word" : str, 
+"foil_word" : str,
+# NOTE : target_word/foil_word = 'ORIG' in case of original/correct caption else foil captions corresponding target & foil word.
+}
+
