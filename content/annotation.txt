@@ -47,6 +47,7 @@ annotation{
 "caption" : str,
 "target_word" : str, 
 "foil_word" : str,
-# NOTE : target_word/foil_word = 'ORIG' in case of original/correct caption else foil captions corresponding target & foil word.
+"foil": boolean # True in case of foil caption else False
+# NOTE : target_word/foil_word = 'ORIG' in case of original/correct caption in testset. target_word/foil_word = '' (Empty) in training set.
 }
 
